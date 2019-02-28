@@ -117,28 +117,32 @@ h1{
     padding-bottom: 10px;
 }
 
-/*Need more understanding on media queries
-at 980px, you want to keep the container where all 
-your media goes to the left of the screen
-at 768px you want everything to be at 100%
-at 640px, you want the website to stack it's 
-content on top of itself*/
-@media(max-width:980px){
+/*bugs include: footer not staying at the bottom of the page*/
+
+@media(min-width:980px){
     .container{
-        width:100%;
-        float:left;
+        padding-right: 40%;
     }
 }
 
 @media(max-width:768px){
-    #main{
-        width:100%;
-        float:none;
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
 @media(max-width:640px){
     h1{
-        position: relative;
+        position: static;
+        float: none;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #myPic{
+        float:none;
+        width:100%;
     }
 }
